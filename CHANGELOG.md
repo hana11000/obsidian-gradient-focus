@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+- Rename the manifest display name to Gradient Focus to comply with community directory naming requirements. The plugin ID and Chinese controls remain unchanged.
+
 ## 1.0.0
 
 First public release.

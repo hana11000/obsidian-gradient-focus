@@ -1,7 +1,7 @@
 {
   "id": "gradient-focus",
-  "name": "渐变聚焦",
-  "version": "1.0.0",
+  "name": "Gradient Focus",
+  "version": "1.0.1",
   "minAppVersion": "1.13.7",
   "description": "Keep a fixed reading area clear while gradually blurring and fading the content above and below it.",
   "author": "Wang2",

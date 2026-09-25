@@ -13,7 +13,7 @@ Keep a fixed reading area clear while progressively blurring and fading the cont
 - Choose gentle, standard, or strong presets; hold a button to reveal the original text.
 - Toggle the effect with a ribbon icon or command. Settings are saved automatically.
 
-The interface is currently in Simplified Chinese. Version 1.0.0 supports desktop Obsidian 1.13.7 or later. Reading view and Live Preview were checked on macOS with Obsidian 1.13.7. Source mode is targeted but has not been separately verified.
+The interface is currently in Simplified Chinese. Version 1.0.1 supports desktop Obsidian 1.13.7 or later. Reading view and Live Preview were checked on macOS with Obsidian 1.13.7. Source mode is targeted but has not been separately verified.
 
 ## Installation
 
@@ -21,11 +21,11 @@ This plugin has not yet been listed in the Obsidian community directory.
 
 1. Download `main.js`, `manifest.json`, and `styles.css` from the [latest release](https://github.com/hana11000/obsidian-gradient-focus/releases/latest).
 2. Put those files inside your vault's `.obsidian/plugins/gradient-focus/` folder.
-3. Reload Obsidian and enable **渐变聚焦** under **Settings → Community plugins**.
+3. Reload Obsidian and enable **Gradient Focus** under **Settings → Community plugins**.
 
-Alternatively, extract `gradient-focus-1.0.0.zip` into `.obsidian/plugins/`; the archive already contains the `gradient-focus` folder.
+Alternatively, extract `gradient-focus-1.0.1.zip` into `.obsidian/plugins/`; the archive already contains the `gradient-focus` folder.
 
-中文：下载上述三个文件，放入知识库的 `.obsidian/plugins/gradient-focus/`，重新加载 Obsidian，然后在第三方插件中启用“渐变聚焦”。
+中文：下载上述三个文件，放入知识库的 `.obsidian/plugins/gradient-focus/`，重新加载 Obsidian，然后在第三方插件中启用“Gradient Focus”。
 
 ## Controls
 
