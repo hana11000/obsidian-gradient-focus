@@ -6,7 +6,7 @@
 .gf-top { top: 0; }
 .gf-bottom { bottom: 0; }
 .gf-blur-layer, .gf-tint { position: absolute; inset: 0; }
-.gf-overlay[hidden], .gf-panel[hidden] { display: none !important; }
+.gf-overlay[hidden], .gf-panel[hidden], .gf-dock[hidden] { display: none !important; }
 .gf-dock { position: absolute; top: 10px; right: 26px; z-index: 8; font-family: var(--font-interface); font-size: 12px; line-height: 1.4; color: var(--text-normal); }
 .gf-toolbar { display: flex; justify-content: flex-end; gap: 2px; }
 .gf-toolbar button { height: 28px; padding: 4px 8px; font-size: 12px; color: var(--text-muted); box-shadow: none; background: var(--background-primary); border: 1px solid var(--background-modifier-border); }
@@ -29,4 +29,39 @@
 .gf-panel-footer button { font-size: 11px; padding: 4px 6px; }
 .gf-panel-footer button:first-child { background: transparent; box-shadow: none; color: var(--text-muted); }
 .gf-dock button:focus-visible, .gf-control input:focus-visible { outline: 2px solid var(--interactive-accent); outline-offset: 3px; }
+.gf-dock { max-width: calc(100% - 24px); }
+.gf-dock *, .gf-dock *::before, .gf-dock *::after { box-sizing: border-box; }
+.gf-dock button, .gf-advanced summary { touch-action: manipulation; -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+.gf-dock button:active { background: var(--background-modifier-hover); }
+.gf-panel { overscroll-behavior: contain; }
+
+/* Phone/tablet layout stays inside the note pane, above Obsidian's own navigation. */
+.gf-mobile .gf-overlay { right: 0; }
+.gf-mobile .gf-dock { top: auto; left: max(12px, env(safe-area-inset-left, 0px)); right: max(12px, env(safe-area-inset-right, 0px)); max-width: 440px; margin-inline: auto; font-size: 15px; }
+.gf-mobile .gf-toolbar { gap: 8px; }
+.gf-mobile .gf-toolbar button { min-width: 44px; min-height: 44px; height: auto; padding: 10px 16px; font-size: 14px; border-radius: 22px; box-shadow: 0 2px 10px rgba(0,0,0,.12); }
+.gf-mobile .gf-toolbar button:last-child { background: var(--interactive-accent); color: var(--text-on-accent); border-color: transparent; }
+.gf-mobile .gf-toolbar svg { width: 20px; height: 20px; }
+.gf-mobile .gf-panel { width: 100%; max-width: none; margin-top: 8px; padding: 8px 16px 12px; border-radius: 22px; overflow-y: auto; box-shadow: 0 8px 28px rgba(0,0,0,.22); }
+.gf-sheet-handle { width: 32px; height: 4px; margin: 0 auto 4px; border-radius: 3px; background: var(--background-modifier-border); }
+.gf-mobile .gf-panel-heading { min-height: 44px; font-size: 17px; }
+.gf-mobile .gf-panel-heading button { min-width: 44px; min-height: 44px; padding: 12px; border-radius: 50%; }
+.gf-mobile .gf-panel-heading svg { width: 20px; height: 20px; }
+.gf-mobile .gf-caption { margin: 0 0 8px; font-size: 12px; }
+.gf-mobile .gf-presets { padding-top: 0; border-top: 0; gap: 8px; }
+.gf-mobile .gf-presets button { min-height: 44px; font-size: 14px; padding: 8px; border-radius: 12px; }
+.gf-mobile .gf-control { margin: 12px 0 4px; }
+.gf-mobile .gf-control-label { margin-bottom: 0; font-size: 14px; }
+.gf-mobile .gf-control output { color: var(--text-normal); font-size: 13px; }
+.gf-mobile .gf-control input[type=range] { min-height: 44px; font-size: 16px; touch-action: pan-y; }
+.gf-mobile .gf-control input[type=range]::-webkit-slider-thumb { width: 24px; height: 24px; }
+.gf-mobile .gf-control input[type=range]::-moz-range-thumb { width: 24px; height: 24px; }
+.gf-advanced { border-top: 1px solid var(--background-modifier-border); margin-top: 4px; }
+.gf-advanced summary { min-height: 44px; padding: 12px 0; font-size: 14px; color: var(--text-muted); cursor: pointer; }
+.gf-mobile .gf-panel-footer { position: sticky; bottom: -12px; padding: 8px 0 4px; margin-top: 0; background: var(--background-primary); }
+.gf-mobile .gf-panel-footer button { min-height: 44px; font-size: 14px; padding: 8px 12px; border-radius: 12px; }
+@media (pointer: coarse) {
+  .gf-dock button { min-height: 44px; min-width: 44px; }
+  .gf-control input[type=range] { min-height: 44px; }
+}
 @media print { .gf-overlay, .gf-dock { display: none !important; } }
